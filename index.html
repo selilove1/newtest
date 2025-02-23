@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Click to Continue</title>
 </head>
 <body>
 
+<h2>Continue to the website</h2>
+<button id="continueBtn">Continue</button>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("continueBtn").addEventListener("click", function () {
         let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
         let finalUrl = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/"; // Dusri site ka URL
 
-        // Adsterra ko naye tab me kholna (impression count ke liye)
-        let newTab = window.open(adsterraUrl, "_blank");
+        // Pehle Adsterra open ho
+        window.location.href = adsterraUrl;
 
-        // Current tab me dusri website pe redirect
+        // 3 sec baad dusri site pe chala jaye
         setTimeout(function () {
             window.location.href = finalUrl;
         }, 3000);
