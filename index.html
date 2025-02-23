@@ -7,23 +7,23 @@
 </head>
 <body>
 
-<h2>Continue to the website</h2>
-<button id="continueBtn">Continue</button>
+    <h2>Continue to the website</h2>
+    <button id="continueBtn">Continue</button>
 
-<script>
-    document.getElementById("continueBtn").addEventListener("click", function () {
-        let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
-        let middlePage = "https://selilove1.github.io/newtest/middle.html"; // Middle page ka URL
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", function () {
+            let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
+            let middlePage = "https://selilove1.github.io/newtest/middle.html"; // Middle page ka URL
 
-        // Adsterra same tab me open ho
-        window.location.href = adsterraUrl;
+            // Adsterra new tab me open hoga
+            window.open(adsterraUrl, "_blank");
 
-        // 3 sec baad Middle Page pe redirect ho
-        setTimeout(function () {
-            window.location.href = middlePage;
-        }, 3000);
-    });
-</script>
+            // 3 sec baad Middle Page pe redirect ho
+            setTimeout(function () {
+                window.location.href = middlePage;
+            }, 3000);
+        });
+    </script>
 
 </body>
 </html>
