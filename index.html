@@ -1,8 +1,26 @@
-<button onclick="startRedirect()">Continue</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
 
 <script>
-    function startRedirect() {
-        window.open("https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19", "_blank");
-        window.location.href = "https://google.com/";
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        let link = document.createElement("a"); // Ek invisible link create karo
+        link.href = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
+        link.target = "_blank"; // Adsterra naye tab me khule
+        document.body.appendChild(link);
+        link.click(); // Auto-click trick
+
+        // Dusri website pe redirect
+        setTimeout(function () {
+            window.location.href = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/";
+        }, 100); // 0.1 sec ke andar dusri site open hogi
+    });
 </script>
+
+</body>
+</html>
