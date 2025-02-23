@@ -12,19 +12,16 @@
         let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
         let finalUrl = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/"; // Dusri website ka URL yahan daalein
 
-        // Adsterra same tab me open ho jaye
+        // Pehle Adsterra ki site open hogi
         window.location.href = adsterraUrl;
 
-        // Dusri site ko background me load kare (ye ensure karega ki site block na ho)
-        let iframe = document.createElement("iframe");
-        iframe.src = finalUrl;
-        iframe.style.display = "none"; // Invisible rakho
-        document.body.appendChild(iframe);
+        // Redirect ke liye ek function use karein
+        function redirectToFinal() {
+            window.location.href = finalUrl;
+        }
 
         // 3 sec ke baad redirect kare
-        setTimeout(function () {
-            window.location.href = finalUrl;
-        }, 3000);
+        setTimeout(redirectToFinal, 3000);
     });
 </script>
 
