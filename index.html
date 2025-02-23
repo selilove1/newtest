@@ -10,18 +10,15 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
-        let finalUrl = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/"; // Dusri website ka URL yahan daalein
+        let finalUrl = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/"; // Dusri site ka URL
 
-        // Pehle Adsterra ki site open hogi
-        window.location.href = adsterraUrl;
+        // Adsterra ko naye tab me kholna (impression count ke liye)
+        let newTab = window.open(adsterraUrl, "_blank");
 
-        // Redirect ke liye ek function use karein
-        function redirectToFinal() {
+        // Current tab me dusri website pe redirect
+        setTimeout(function () {
             window.location.href = finalUrl;
-        }
-
-        // 3 sec ke baad redirect kare
-        setTimeout(redirectToFinal, 3000);
+        }, 3000);
     });
 </script>
 
