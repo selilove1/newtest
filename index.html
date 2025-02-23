@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        setTimeout(function () {
-            // Pehle Adsterra ek naye tab me open hogi
-            window.open("https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19", "_blank");
-        }, 3000);
+<button onclick="startRedirect()">Continue</button>
 
-        setTimeout(function () {
-            // Phir current tab dusri website pe chala jayega
-            window.location.href = "https://www.google.com/";
-        }, 4000); // 4 sec ke baad dusri site open hogi
-    </script>
-</head>
-<body>
-    <h2>Redirecting, please wait...</h2>
-</body>
-</html>
+<script>
+    function startRedirect() {
+        window.open("https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19", "_blank");
+        window.location.href = "https://google.com/";
+    }
+</script>
