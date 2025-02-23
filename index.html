@@ -9,16 +9,22 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        let link = document.createElement("a"); // Ek invisible link create karo
-        link.href = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
-        link.target = "_blank"; // Adsterra naye tab me khule
-        document.body.appendChild(link);
-        link.click(); // Auto-click trick
+        let adsterraUrl = "https://honoursimportantlycomb.com/tai51sjja?key=cf9a20eca9239bf9c679be9953d59f19";
+        let finalUrl = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/"; // Dusri website ka URL yahan daalein
 
-        // Dusri website pe redirect
+        // Adsterra same tab me open ho jaye
+        window.location.href = adsterraUrl;
+
+        // Dusri site ko background me load kare (ye ensure karega ki site block na ho)
+        let iframe = document.createElement("iframe");
+        iframe.src = finalUrl;
+        iframe.style.display = "none"; // Invisible rakho
+        document.body.appendChild(iframe);
+
+        // 3 sec ke baad redirect kare
         setTimeout(function () {
-            window.location.href = "https://leoload.com/best-10-hospital-in-chennai-for-quality-care/";
-        }, 100); // 0.1 sec ke andar dusri site open hogi
+            window.location.href = finalUrl;
+        }, 3000);
     });
 </script>
 
